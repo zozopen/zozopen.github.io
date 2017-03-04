@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>个人主页</title>
+  <style>
+	html
+	{
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+		position:relative;
+		background: url(img/bg.jpg) no-repeat center;
+		background-size: 100% 100%;	
+		animation:myfirst 3s;
+		-moz-animation:myfirst 3s;
+		-webkit-animation:myfirst 3s;
+		
+	}
+	@keyframes myfirst{
+		from{background-size:130% 130%;}
+		to{background-size:100% 100%;}
+	}
+	@-moz-keyframes myfirst{
+		from{background-size:130% 130%;}
+		to{background-size:100% 100%;}
+	}
+	@-webkit-keyframes myfirst{
+		from{background-size:130% 130%;}
+		to{background-size:100% 100%;}
+	}
+	body{
+		margin:0;
+		padding:0;
+		color:#FFF;
+		font-family: '幼圆';
+	}
+	.main{
+		width:810px;
+		height:450px;
+		margin:0 auto;
+		margin-top:50px;
+		box-shadow: 10px 10px 5px #888888;
+		animation:mainmove 4s;
+		-moz-animation:mainmove 4s;
+		-webkit-animation:mainmove 4s:
+	}
+	@keyframes mainmove{
+		0%{opacity:0;}
+		100%{opacity: 1;}
+	}
+	@-moz-keyframes mainmove{
+		0%{opacity:0;}
+		100%{opacity: 1;}
+	}
+	@-webkit-keyframes mainmove{
+		0%{opacity:0;}
+		100%{opacity: 1;}
+	}
+	.mainLeft{
+		width:300px;
+		height:450px;
+		border:solid #FFF 2px;
+		float:left;
+		border-radius:10px;
+		
+	}
+	.mainRight{
+		width:500px;
+		height:450px;
+		border:solid #FFF 2px;
+		float:right;
+		border-radius:10px;	
+		
+	}
+	.headerTop{
+		height:180px;
+		width:180px;
+		margin:0 auto;
+		cursor: pointer;
+		margin-top:20px;
+		border-radius:90px;
+		
+		
+	}
+	.headerTop img{
+		height:180px;
+		width:180px;
+		border-radius:90px;
+		-o-transition: box-shadow 1.5s;
+		-moz-transition: box-shadow 1.5s;
+		-webkit-transition: box-shadow 1.5s;
+		transition: box-shadow 1.5s;
+			
+	}
+	.headerTop img:hover{
+		
+		box-shadow: 0px 0px 20px #8968CD;
+	}
+	.headerBtm{
+		width:280px;
+		height:180px;
+		margin:0 auto;
+		border-top:solid #FFF 3px;
+		margin-top:50px;
+		text-align: center;
+		
+	}
+	
+	#mainTop{
+		width:400px;
+		height:250px;
+		border:solid #fff 1px;
+		margin:0 auto;
+		margin-top:20px;
+		border-radius:10px;
+	}
+	.mainBtm{
+		width:420px;
+		height:100px;
+		margin:0 auto;
+		padding-top:30px;
+		
+	}
+	.Img01,
+	.Img02,
+	.Img03,
+	.Img04{
+		width:80px;
+		height: 80px;
+		border-radius:10px;
+		-webkit- border-radius:10px;
+		float:left;
+		margin-top:10px;
+		margin-left:20px;
+		
+	}
+	.mainBtm img{
+		width:80px;
+		height:80px;
+		border-radius:10px;
+		-webkit-border-radius:10px;
+		-webkit-transition: box-shadow 1s;
+		transition: box-shadow 1s;
+		cursor: pointer;
+	}
+	.Img01,
+	.Img02,
+	.Img03,
+	.Img04, img:hover{
+		box-shadow: 0px 0px 10px #ADD8E6;
+	}
+	#one,
+	#two,
+	#three,
+	#four{
+		text-align: center;
+		margin-top:60px;
+	}
+	#mainTop div{
+		display: none;
+	}
+	a{
+		color:#FFF;
+	}
+	a:hover{
+		color: #8470FF;
+	}
+  </style>
+  <script>
+  	window.onload = function(){
+		var Btn = document.getElementById("mainImg").getElementsByTagName("div");
+		var Bchange = document.getElementById("mainTop").getElementsByTagName("div");
+
+		for (var i = 0;i < Btn.length; i++ )
+		{	Btn[i].index = i;
+			Btn[i].onmouseover = function(){
+				for(var n = 0 ; n < Bchange.length; n++) Bchange[n].style.display="none";
+				Bchange[this.index].style.display = "block"
+			}
+		}
+	}
+  </script>
+ </head>
+ <body>
+  <div class="main">
+	<div class="mainLeft">
+		<div class="headerTop">
+			<img src="img/photo1.jpg"/> 
+		</div>
+		<div class="headerBtm">
+			<p>我叫彭嘉林</p>
+			<p>一名前端工程师</p>
+			<p>xloever@qq.com</p>
+		</div>
+	</div>
+	<div class="mainRight">
+		<div id="mainTop">
+			<div id="one">
+				<h1>My Resume</h1>
+				<p>个人github简历</p>
+				<p><a href="https://zozopen.github.io/myResume/" target="_blank">https://zozopen.github.io/myResume/</a></p>
+			</div>
+			<div id="two">
+				<h1>My Design</h1>
+				<p >我的一些作品，利用CSS3+HTML5+Javascript搭建</p>
+				<p>商城：<a href="https://zozopen.github.io/shopDemo/" target="_blank">https://zozopen.github.io/shopDemo/</a></p>
+				<p>网站：<a href="https://zozopen.github.io/companyDemo/" target="_blank">https://zozopen.github.io/companyDemo/</a></p>
+
+			</div>
+			<div id="three">
+				<h1>JS Demo</h1>
+				<p>一些JS交互练习Demo</p>
+				<p><a href="https://zozopen.github.io/Jsdemo/" target="_blank">https://zozopen.github.io/Jsdemo/</a></p>
+			</div>
+			<div id="four">
+				<h1>个人Git Hub</h1>
+				<p>里面记录一些平常的学习记录</p>
+				<p><a href="https://github.com/zozopen" target="_blank">https://github.com/zozopen</a></p>
+			</div>
+			
+		</div>
+		<div class="mainBtm">
+			<div id="mainImg">
+				<div class="Img01"><img src="img/My resume.jpg"></div>
+				<div class="Img02"><img src="img/Mydesgin.jpg"></div>
+				<div class="Img03"><img src="img/JSdemo.jpg"></div>
+				<div class="Img04"><img src="img/GitHub.jpg"></div>
+				
+			</div>
+		</div>
+	</div>
+  </div>
+ </body>
+</html>
